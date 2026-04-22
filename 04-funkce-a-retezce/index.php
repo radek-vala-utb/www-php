@@ -11,7 +11,7 @@ function make_slug(string $text): string
     return trim($text ?? '', '-');
 }
 
-$input = $_GET['text'] ?? '  uvod do PHP pro zacatecniky  ';
+$input = $_GET['text'] ?? '  úvod do PHP pro začátečníky  ';
 $title = make_title($input);
 $slug = make_slug($input);
 $length = strlen(trim($input));
@@ -21,18 +21,18 @@ $length = strlen(trim($input));
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>04. Funkce a retezce</title>
+    <title>04. Funkce a řetězce</title>
     <link rel="stylesheet" href="../lesson.css" />
   </head>
   <body>
     <main>
-      <h1>04. Funkce a retezce</h1>
-      <p>Ukazka vlastnich funkci, parametru, navratove hodnoty a upravy textu.</p>
+      <h1>04. Funkce a řetězce</h1>
+      <p>Ukázka vlastních funkcí, parametrů, návratové hodnoty a úpravy textu.</p>
 
       <section class="card">
         <form action="" method="get">
           <div class="field">
-            <label for="text">Vstupni text</label>
+            <label for="text">Vstupní text</label>
             <input id="text" name="text" type="text" value="<?= htmlspecialchars($input, ENT_QUOTES, 'UTF-8'); ?>" />
           </div>
 
@@ -41,10 +41,10 @@ $length = strlen(trim($input));
       </section>
 
       <section class="card">
-        <h2>Vystupy funkci</h2>
+        <h2>Výstupy funkcí</h2>
         <table>
           <tr>
-            <th>Polozka</th>
+            <th>Položka</th>
             <th>Hodnota</th>
           </tr>
           <tr>
@@ -56,14 +56,14 @@ $length = strlen(trim($input));
             <td><?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8'); ?></td>
           </tr>
           <tr>
-            <td>Delka po trim()</td>
+            <td>Délka po trim()</td>
             <td><?= $length; ?></td>
           </tr>
         </table>
       </section>
 
       <section class="card">
-        <h2>Kod</h2>
+        <h2>Kód</h2>
         <pre><?= htmlspecialchars(
 'function make_title(string $text): string
 {
@@ -78,7 +78,7 @@ function make_slug(string $text): string
 }', ENT_QUOTES, 'UTF-8'); ?></pre>
       </section>
 
-      <a class="nav-link" href="../index.php">Zpet na prehled</a>
+      <a class="nav-link" href="../index.php">Zpět na přehled</a>
     </main>
   </body>
 </html>

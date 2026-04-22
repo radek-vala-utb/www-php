@@ -8,15 +8,15 @@ $message = trim($_POST['message'] ?? '');
 
 if ($submitted) {
     if ($name === '') {
-        $errors[] = 'Jmeno je povinne.';
+        $errors[] = 'Jméno je povinné.';
     }
 
     if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Email nema spravny format.';
+        $errors[] = 'E-mail nemá správný formát.';
     }
 
     if ($message === '' || strlen($message) < 10) {
-        $errors[] = 'Zprava musi mit alespon 10 znaku.';
+        $errors[] = 'Zpráva musí mít alespoň 10 znaků.';
     }
 }
 ?>
@@ -31,12 +31,12 @@ if ($submitted) {
   <body>
     <main>
       <h1>06. GET a POST validace</h1>
-      <p>Ukazka zpracovani formulare metodou <code>POST</code> a jednoduche validace.</p>
+      <p>Ukázka zpracování formuláře metodou <code>POST</code> a jednoduché validace.</p>
 
       <section class="card">
         <form action="" method="post">
           <div class="field">
-            <label for="name">Jmeno</label>
+            <label for="name">Jméno</label>
             <input id="name" name="name" type="text" value="<?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?>" />
           </div>
 
@@ -46,7 +46,7 @@ if ($submitted) {
           </div>
 
           <div class="field">
-            <label for="message">Zprava</label>
+            <label for="message">Zpráva</label>
             <textarea id="message" name="message"><?= htmlspecialchars($message, ENT_QUOTES, 'UTF-8'); ?></textarea>
           </div>
 
@@ -56,7 +56,7 @@ if ($submitted) {
 
       <?php if ($submitted && $errors !== []): ?>
         <section class="card">
-          <h2>Chyby ve formulari</h2>
+          <h2>Chyby ve formuláři</h2>
           <ul class="error-list">
             <?php foreach ($errors as $error): ?>
               <li><?= htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?></li>
@@ -67,22 +67,22 @@ if ($submitted) {
 
       <?php if ($submitted && $errors === []): ?>
         <section class="card success-box">
-          <h2>Validace prosla</h2>
-          <p><strong>Jmeno:</strong> <?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?></p>
+          <h2>Validace prošla</h2>
+          <p><strong>Jméno:</strong> <?= htmlspecialchars($name, ENT_QUOTES, 'UTF-8'); ?></p>
           <p><strong>Email:</strong> <?= htmlspecialchars($email, ENT_QUOTES, 'UTF-8'); ?></p>
-          <p><strong>Zprava:</strong> <?= nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8')); ?></p>
+          <p><strong>Zpráva:</strong> <?= nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8')); ?></p>
         </section>
       <?php endif; ?>
 
       <section class="card">
-        <h2>Poznamka k bezpecnosti</h2>
+        <h2>Poznámka k bezpečnosti</h2>
         <p class="muted">
-          Pri vypisu uzivatelskych dat pouzivame <code>htmlspecialchars()</code>,
+          Při výpisu uživatelských dat používáme <code>htmlspecialchars()</code>,
           aby se vstup neinterpretoval jako HTML.
         </p>
       </section>
 
-      <a class="nav-link" href="../index.php">Zpet na prehled</a>
+      <a class="nav-link" href="../index.php">Zpět na přehled</a>
     </main>
   </body>
 </html>

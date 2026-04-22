@@ -4,7 +4,7 @@ $age = (int) $ageInput;
 $isStudent = isset($_GET['student']);
 
 if ($age < 0) {
-    $group = 'Neplatny vek';
+    $group = 'Neplatný věk';
     $discount = 0;
 } elseif ($age < 18) {
     $group = 'Junior';
@@ -16,7 +16,7 @@ if ($age < 0) {
     $group = 'Student';
     $discount = 15;
 } else {
-    $group = 'Dospely';
+    $group = 'Dospělý';
     $discount = 0;
 }
 ?>
@@ -25,23 +25,23 @@ if ($age < 0) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>02. Podminky a formulare</title>
+    <title>02. Podmínky a formuláře</title>
     <link rel="stylesheet" href="../lesson.css" />
   </head>
   <body>
     <main>
-      <h1>02. Podminky a formulare</h1>
-      <p>Ukazka rozhodovani pomoci <code>if</code>, <code>elseif</code> a <code>else</code>.</p>
+      <h1>02. Podmínky a formuláře</h1>
+      <p>Ukázka rozhodování pomocí <code>if</code>, <code>elseif</code> a <code>else</code>.</p>
 
       <section class="card">
         <form action="" method="get">
           <div class="field">
-            <label for="age">Vek</label>
+            <label for="age">Věk</label>
             <input id="age" name="age" type="number" value="<?= htmlspecialchars($ageInput, ENT_QUOTES, 'UTF-8'); ?>" />
           </div>
 
           <div class="field">
-            <label for="student">Je student</label>
+            <label for="student">Je studentem</label>
             <input
               id="student"
               name="student"
@@ -56,12 +56,12 @@ if ($age < 0) {
       </section>
 
       <section class="card">
-        <h2>Vyhodnoceni</h2>
+        <h2>Vyhodnocení</h2>
         <p>Kategorie: <strong><?= htmlspecialchars($group, ENT_QUOTES, 'UTF-8'); ?></strong></p>
         <p>Sleva: <strong><?= $discount; ?> %</strong></p>
         <pre><?= htmlspecialchars(
 'if ($age < 0) {
-    $group = "Neplatny vek";
+    $group = "Neplatný věk";
 } elseif ($age < 18) {
     $group = "Junior";
 } elseif ($age >= 65) {
@@ -69,11 +69,11 @@ if ($age < 0) {
 } elseif ($isStudent) {
     $group = "Student";
 } else {
-    $group = "Dospely";
+    $group = "Dospělý";
 }', ENT_QUOTES, 'UTF-8'); ?></pre>
       </section>
 
-      <a class="nav-link" href="../index.php">Zpet na prehled</a>
+      <a class="nav-link" href="../index.php">Zpět na přehled</a>
     </main>
   </body>
 </html>

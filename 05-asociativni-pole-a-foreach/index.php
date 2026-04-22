@@ -3,24 +3,24 @@ $category = $_GET['category'] ?? 'all';
 
 $courses = [
     [
-        'title' => 'HTML a struktura stranky',
+        'title' => 'HTML a struktura stránky',
         'category' => 'frontend',
-        'level' => 'zacatecnik',
+        'level' => 'začátečník',
     ],
     [
-        'title' => 'Zaklady PHP',
+        'title' => 'Základy PHP',
         'category' => 'backend',
-        'level' => 'zacatecnik',
+        'level' => 'začátečník',
     ],
     [
-        'title' => 'Prace s formularem',
+        'title' => 'Práce s formulářem',
         'category' => 'backend',
-        'level' => 'mirne pokrocily',
+        'level' => 'mírně pokročilý',
     ],
     [
         'title' => 'JavaScript v prohlizeci',
         'category' => 'frontend',
-        'level' => 'zacatecnik',
+        'level' => 'začátečník',
     ],
 ];
 
@@ -36,20 +36,20 @@ foreach ($courses as $course) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>05. Asociativni pole a foreach</title>
+    <title>05. Asociativní pole a foreach</title>
     <link rel="stylesheet" href="../lesson.css" />
   </head>
   <body>
     <main>
-      <h1>05. Asociativni pole a foreach</h1>
-      <p>Data ulozena jako pole zaznamu, vypis do tabulky a jednoduche filtrovani.</p>
+      <h1>05. Asociativní pole a foreach</h1>
+      <p>Data uložená jako pole záznamů, výpis do tabulky a jednoduché filtrování.</p>
 
       <section class="card">
         <form action="" method="get">
           <div class="field">
             <label for="category">Kategorie</label>
             <select id="category" name="category">
-              <option value="all" <?= $category === 'all' ? 'selected' : ''; ?>>Vse</option>
+              <option value="all" <?= $category === 'all' ? 'selected' : ''; ?>>Vše</option>
               <option value="frontend" <?= $category === 'frontend' ? 'selected' : ''; ?>>Frontend</option>
               <option value="backend" <?= $category === 'backend' ? 'selected' : ''; ?>>Backend</option>
             </select>
@@ -60,12 +60,12 @@ foreach ($courses as $course) {
       </section>
 
       <section class="card">
-        <h2>Seznam kurzu</h2>
+        <h2>Seznam kurzů</h2>
         <table>
           <tr>
-            <th>Nazev</th>
+            <th>Název</th>
             <th>Kategorie</th>
-            <th>Uroven</th>
+            <th>Úroveň</th>
           </tr>
           <?php foreach ($filteredCourses as $course): ?>
             <tr>
@@ -78,18 +78,18 @@ foreach ($courses as $course) {
       </section>
 
       <section class="card">
-        <h2>Ukazka datove struktury</h2>
+        <h2>Ukázka datové struktury</h2>
         <pre><?= htmlspecialchars(
 '$courses = [
     [
-        "title" => "Zaklady PHP",
+        "title" => "Základy PHP",
         "category" => "backend",
-        "level" => "zacatecnik",
+        "level" => "začátečník",
     ],
 ];', ENT_QUOTES, 'UTF-8'); ?></pre>
       </section>
 
-      <a class="nav-link" href="../index.php">Zpet na prehled</a>
+      <a class="nav-link" href="../index.php">Zpět na přehled</a>
     </main>
   </body>
 </html>
