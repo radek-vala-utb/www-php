@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP vyukove priklady</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Uvod do PHP</p>
+        <h1>PHP vyukove priklady</h1>
+        <p>
+          Zakladni sada prikladu pro vyuku syntaxe, podminek, poli, funkci a
+          prace s formularem. Tato uvodni stranka je staticka, aby sla zobrazit
+          i na GitHub Pages.
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2>Kde to pujde spustit</h2>
+        <p>
+          GitHub Pages umi zobrazit tento prehled, ale neumi vykonavat PHP.
+          Plne funkcni lekce spustis v GitHub Codespaces nebo lokalne pres
+          vestaveny PHP server prikazem <code>php -S localhost:8000</code>.
+        </p>
+        <p id="lesson-count"></p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>01. Zaklady syntaxe a promenne</h2>
+          <p>Promenne, datove typy, pretypovani a skladani textoveho vystupu.</p>
+          <pre><code>$name = "Anna";
+$year = 2004;
+$age = date("Y") - $year;</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>02. Podminky a formulare</h2>
+          <p>Jednoduche rozhodovani pomoci <code>if</code>, <code>elseif</code> a <code>else</code>.</p>
+          <pre><code>if ($age &lt; 18) {
+    $group = "junior";
+} else {
+    $group = "dospely";
+}</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>03. Pole a cykly</h2>
+          <p>Rozdeleni textu do pole a postupny vypis hodnot ve <code>foreach</code>.</p>
+          <pre><code>$items = explode(",", $input);
+foreach ($items as $item) {
+    echo trim($item);
+}</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>04. Funkce a retezce</h2>
+          <p>Vlastni funkce, parametry, navratova hodnota a uprava textu.</p>
+          <pre><code>function makeTitle(string $text): string {
+    return strtoupper(trim($text));
+}</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>05. Asociativni pole a foreach</h2>
+          <p>Prace s klici, hodnotami a filtrovani jednoduche datove struktury.</p>
+          <pre><code>$student = [
+    "jmeno" =&gt; "Eva",
+    "body" =&gt; 92,
+];</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>06. GET a POST validace</h2>
+          <p>Zakladni validace formularovych dat a bezpecny vypis pomoci <code>htmlspecialchars()</code>.</p>
+          <pre><code>$safeName = htmlspecialchars($name, ENT_QUOTES, "UTF-8");</code></pre>
+        </article>
+      </section>
+
+      <section class="panel panel-accent">
+        <h2>Jak pokracovat</h2>
+        <p>
+          Pokud chces PHP opravdu spoustet, otevri tento projekt v prostredi s
+          podporou PHP serveru. V Codespaces nebo lokalne pouzij
+          <code>index.php</code> jako hlavni rozcestnik.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "PHP vyuka",
+  "image": "mcr.microsoft.com/devcontainers/php:1-8.2-bookworm",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "PHP vyuka",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "php -v",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php"
+      },
+      "extensions": [
+        "xdebug.php-pack",
+        "bmewburn.vscode-intelephense-client"
+      ]
+    }
+  }
+}
