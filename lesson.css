@@ -91,6 +91,25 @@ td {
   border-bottom: 1px solid #d7e0ea;
   padding: 10px 8px;
   text-align: left;
+  vertical-align: top;
+}
+
+td form {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+}
+
+td button {
+  width: auto;
+  padding: 8px 12px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
 }
 
 .error-list {

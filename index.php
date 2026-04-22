@@ -30,6 +30,21 @@ $lessons = [
         'path' => './06-get-a-post-validace/index.php',
         'description' => 'Zpracování formuláře a kontrola povinných polí.',
     ],
+    [
+        'title' => '07. SQLite a databáze',
+        'path' => './07-sqlite-zaklady/index.php',
+        'description' => 'Základní práce s PDO, SQLite databází a tabulkou záznamů.',
+    ],
+    [
+        'title' => '08. Kompletní CRUD nad SQLite',
+        'path' => './08-sqlite-crud-zaklad/index.php',
+        'description' => 'Create, Read, Update a Delete nad jednou tabulkou studentů.',
+    ],
+    [
+        'title' => '09. Objektové PHP a mini ORM',
+        'path' => './09-oop-a-mini-orm/index.php',
+        'description' => 'Objektové modely, repository-like přístup a vazba studentů na kurzy.',
+    ],
 ];
 ?>
 <!DOCTYPE html>

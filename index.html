@@ -79,6 +79,28 @@ foreach ($items as $item) {
           <p>Základní validace formulářových dat a bezpečný výpis pomocí <code>htmlspecialchars()</code>.</p>
           <pre><code>$safeName = htmlspecialchars($name, ENT_QUOTES, "UTF-8");</code></pre>
         </article>
+
+        <article class="card">
+          <h2>07. SQLite a databáze</h2>
+          <p>Základní práce s databází přes <code>PDO</code>, vytvoření tabulky a výpis dat.</p>
+          <pre><code>$pdo = new PDO("sqlite:students.sqlite");
+$pdo-&gt;exec("CREATE TABLE IF NOT EXISTS students (...)");</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>08. Kompletní CRUD nad SQLite</h2>
+          <p>Vytvoření, výpis, úprava i smazání záznamu v jedné jednoduché aplikaci.</p>
+          <pre><code>$statement = $pdo-&gt;prepare("UPDATE students SET ... WHERE id = :id");
+$statement-&gt;execute([...]);</code></pre>
+        </article>
+
+        <article class="card">
+          <h2>09. Objektové PHP a mini ORM</h2>
+          <p>Modely, třídy, vazby mezi tabulkami a ORM-style práce s daty bez frameworku.</p>
+          <pre><code>$student = Student::find(1);
+$student-&gt;name = "Anna";
+$student-&gt;save();</code></pre>
+        </article>
       </section>
 
       <section class="panel panel-accent">

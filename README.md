@@ -14,6 +14,9 @@ Struktura:
 - `04-funkce-a-retezce/index.php`
 - `05-asociativni-pole-a-foreach/index.php`
 - `06-get-a-post-validace/index.php`
+- `07-sqlite-zaklady/index.php`
+- `08-sqlite-crud-zaklad/index.php`
+- `09-oop-a-mini-orm/index.php`
 
 Doporučené pořadí:
 
@@ -23,6 +26,9 @@ Doporučené pořadí:
 4. `04-funkce-a-retezce`
 5. `05-asociativni-pole-a-foreach`
 6. `06-get-a-post-validace`
+7. `07-sqlite-zaklady`
+8. `08-sqlite-crud-zaklad`
+9. `09-oop-a-mini-orm`
 
 ## GitHub Pages vs. PHP
 
