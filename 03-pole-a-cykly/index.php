@@ -38,7 +38,8 @@ foreach ($rawItems as $rawItem) {
         <h2>Výsledek</h2>
         <p>Nalezeno položek: <strong><?= count($items); ?></strong></p>
         <pre><?php foreach ($items as $index => $item): ?>
-<?= htmlspecialchars(($index + 1) . '. ' . $item, ENT_QUOTES, 'UTF-8') . "\n"; ?><?php endforeach; ?></pre>
+          <?=  htmlspecialchars(($index + 1) . '. ' . $item, ENT_QUOTES, 'UTF-8') . "\n"; ?><?php endforeach; ?></pre>
+      
       </section>
 
       <section class="card">

@@ -11,7 +11,7 @@ function make_slug(string $text): string
     return trim($text ?? '', '-');
 }
 
-$input = $_GET['text'] ?? '  úvod do PHP pro začátečníky  ';
+$input = $_GET['text'] ?? 'uvod do PHP';
 $title = make_title($input);
 $slug = make_slug($input);
 $length = strlen(trim($input));
